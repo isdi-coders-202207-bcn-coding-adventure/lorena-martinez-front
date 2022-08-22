@@ -1,4 +1,3 @@
-import "fontsource-oxanium";
 import StyledCounter from "./StyledCounter";
 
 const Counter = (): JSX.Element => {

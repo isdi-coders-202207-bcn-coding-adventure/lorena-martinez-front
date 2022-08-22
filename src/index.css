@@ -1,4 +1,11 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Oxanium, sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-bg-color: #243342;
+  --second-bg-color: #ffc700;
+  --main-text-color: #ebedec;
 }
