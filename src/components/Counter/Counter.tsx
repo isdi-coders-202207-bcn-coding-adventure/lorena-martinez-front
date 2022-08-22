@@ -3,19 +3,19 @@ const Counter = (): JSX.Element => {
     <ul className="counter-container">
       <li className="counter-item">
         <span className="counter-item__numbers">02</span>
-        <span className="counter-item__title ">days</span>
+        <span className="counter-item__text ">days</span>
       </li>
       <li className="counter-item">
         <span className="counter-item__numbers">20</span>
-        <span className="counter-item__title ">hours</span>
+        <span className="counter-item__text ">hours</span>
       </li>
       <li className="counter-item">
         <span className="counter-item__numbers">34</span>
-        <span className="counter-item__title ">minutes</span>
+        <span className="counter-item__text">minutes</span>
       </li>
       <li className="counter-item">
         <span className="counter-item__numbers">09</span>
-        <span className="counter-item__title ">seconds</span>
+        <span className="counter-item__text ">seconds</span>
       </li>
     </ul>
   );
