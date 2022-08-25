@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Header from "../Header/Header";
-import Counter from "../Counter/Counter";
+import CounterComponent from "../Counter/CounterComponent";
 
 const StyledContainer = styled.div`
   margin: 0 auto;
@@ -12,7 +12,7 @@ const Layout = (): JSX.Element => {
   return (
     <StyledContainer>
       <Header />
-      <Counter />
+      <CounterComponent />
     </StyledContainer>
   );
 };

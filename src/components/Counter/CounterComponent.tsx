@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import deadLine from "../../utils";
+import { useState } from "react";
+import countTime from "../../utils/countTime";
+import deadLine from "../../utils/utils";
 import StyledCounter from "./StyledCounter";
 
-const Counter = (): JSX.Element => {
+const CounterComponent = (): JSX.Element => {
   interface Timer {
     days: number;
     hours: number;
@@ -19,21 +20,11 @@ const Counter = (): JSX.Element => {
 
   const [timeLeft, setTimeLeft] = useState(initalTimer);
 
-  useEffect(() => {
-    setInterval(() => {
-      const timeLeftToBeFree = deadLine - new Date().getTime();
-      setTimeLeft({
-        days: Math.floor(timeLeftToBeFree / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (timeLeftToBeFree % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        ),
-        minutes: Math.floor(
-          (timeLeftToBeFree % (1000 * 60 * 60)) / (1000 * 60)
-        ),
-        seconds: Math.floor((timeLeftToBeFree % (1000 * 60)) / 1000),
-      });
-    }, 1000);
-  }, []);
+  setInterval(() => {
+    const timeLeftToBeFree = deadLine - new Date().getTime();
+    const daysLeft = countTime(timeLeftToBeFree);
+    setTimeLeft(daysLeft);
+  }, 1000);
 
   return (
     <StyledCounter className="counter-container">
@@ -57,4 +48,4 @@ const Counter = (): JSX.Element => {
   );
 };
 
-export default Counter;
+export default CounterComponent;
